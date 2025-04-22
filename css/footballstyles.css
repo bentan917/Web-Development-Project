@@ -1,0 +1,61 @@
+body {
+    background-color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+    color: rgb(255, 255, 255);
+}
+
+ol, ul {
+    margin-left: 30px;
+    color: #333;
+    font-family: 'Verdana', sans-serif;
+  }
+
+  body {
+    background-color: #9e7f7f;
+    color: #222;
+    font-family: 'Georgia', serif;
+    margin: 20px;
+  }
+  
+  /* Header style */
+  .header {
+    background-color: #d7a24b;
+    color: rgb(185, 13, 13);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Main content style */
+  .main-content {
+    background-color: #553e3e;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #bf8282;
+  }
+  
+  /* Media block style */
+  .media-block {
+    background-color: #000000;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  /* Image styling */
+  .helmet-img {
+    float: right;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: 2px solid #aaa;
+  }
+  
+  /* Ordered/unordered list styles */
+  ol, ul {
+    margin-left: 30px;
+    font-family: 'Verdana', sans-serif;
+  }
+  
+
