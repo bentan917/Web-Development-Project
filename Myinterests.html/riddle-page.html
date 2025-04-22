@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Riddle Me This</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #3917f9;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #00f936;
+    }
+    .riddle-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      display: inline-block;
+      max-width: 500px;
+    }
+    input, button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Riddle Me This 🤔</h1>
+  <div class="riddle-box">
+    <p id="riddle">Click below to get a riddle!</p>
+    <input type="text" id="answer" placeholder="Your guess..." />
+    <br>
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <button onclick="getRiddle()">New Riddle</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    const riddles = [
+      {
+        question: "What has to be broken before you can use it?",
+        answer: "egg"
+      },
+      {
+        question: "I'm tall when I'm young, and I'm short when I'm old. What am I?",
+        answer: "candle"
+      },
+      {
+        question: "What month of the year has 28 days?",
+        answer: "all of them"
+      },
+      {
+        question: "What is full of holes but still holds water?",
+        answer: "sponge"
+      }
+    ];
+
+    let currentAnswer = "";
+
+    function getRiddle() {
+      const random = riddles[Math.floor(Math.random() * riddles.length)];
+      document.getElementById("riddle").textContent = random.question;
+      currentAnswer = random.answer.toLowerCase();
+      document.getElementById("result").textContent = "";
+      document.getElementById("answer").value = "";
+    }
+
+    function checkAnswer() {
+      const userInput = document.getElementById("answer").value.toLowerCase().trim();
+      if (!currentAnswer) {
+        document.getElementById("result").textContent = "Please click 'New Riddle' first!";
+        return;
+      }
+      if (userInput === currentAnswer) {
+        document.getElementById("result").textContent = "✅ Correct!";
+      } else {
+        document.getElementById("result").textContent = "❌ Nope! Try again!";
+      }
+    }
+  </script>
+
+</body>
+</html>
